@@ -17,6 +17,7 @@
 //         resolve()
 //     }, 1000)
 
+
 // }).then(function(){
 //     console.log("Async 2 resolved");
 // })
@@ -51,8 +52,6 @@
 // }).catch(function(error){
 //     console.log(error);
 // }).finally(() => console.log("The promise is either resolved or rejected"))
-
-
 
 // const promiseFive = new Promise(function(resolve, reject){
 //     setTimeout(function(){
