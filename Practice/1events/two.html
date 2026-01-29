@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <p>Event in Projects</p>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayHello = function () {
+      console.log("Hello Sonu");
+    };
+    const changeText = function () {
+      document.querySelector("p").innerHTML = "BEST JS SERIES";
+    };
+
+    const changeme = setTimeout(changeText, 3000);
+
+    document.querySelector("button").addEventListener("click", function () {
+      clearTimeout(changeme);
+      console.log("stopped")
+    });
+  </script>
+</html>
