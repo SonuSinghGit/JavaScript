@@ -55,7 +55,7 @@
 
 const promise5 = new Promise((resolve,reject)=>{
     setTimeout(()=>{
-        let error = true;
+        let error = false;
         if(!error){
             resolve({username:"sonu",email:"sonu@gmail.com"})
         }else{
@@ -64,3 +64,8 @@ const promise5 = new Promise((resolve,reject)=>{
     },1000)
 
 });
+async function consumedPromise(){
+    const response = await promise5
+    console.log(response)
+}
+consumedPromise()
