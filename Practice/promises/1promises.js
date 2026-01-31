@@ -4,13 +4,13 @@
 //     console.log("Async task is complete");
 //      resolve();
 //   }, 1000);
- 
+
 // });
 // promisOne.then(()=>{
 //     console.log("Promise consumed")
 // })
 
-// second approch 
+// second approch
 
 // new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
@@ -52,7 +52,6 @@
 //     console.log("promise is wether fulfill or rejected")
 // });
 
-
 // const promise5 = new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
 //         let error = true;
@@ -71,25 +70,30 @@
 //         console.log(response)
 //     } catch (error) {
 //         console.log("Error:caught",error)
-        
+
 //     }
 // }
 // consumedPromise()
 
+// async function getAllusers(){
+//    try {
+//      const response = await fetch("https://jsonplaceholder.typicode.com/users")
+//      const  data= await response.json()
+//     console.log(data)
+//    } catch (error) {
+//     console.log(error)
+//    }
+// }
+// getAllusers();
 
-async function getAllusers(){
-   try {
-     const response = await fetch("https://jsonplaceholder.typicode.com/users")
-     const  data= await response.json()
-     .then((data)=>{
-         console.log("user data",data)
-     })
-     .catch(()=>{
-        console.log("error during fetching data")
-     })
-    // console.log(data)
-   } catch (error) {
-    console.log(error)
-   }
-}
-getAllusers();
+// fetched api througt then and catch
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then((response) => {
+    return response.json();
+  })
+  .then((data) => {
+    console.log(data);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
