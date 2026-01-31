@@ -53,19 +53,43 @@
 // });
 
 
-const promise5 = new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        let error = false;
-        if(!error){
-            resolve({username:"sonu",email:"sonu@gmail.com"})
-        }else{
-            reject('Error: something went wrong')
-        }
-    },1000)
+// const promise5 = new Promise((resolve,reject)=>{
+//     setTimeout(()=>{
+//         let error = true;
+//         if(!error){
+//             resolve({username:"sonu",email:"sonu@gmail.com"})
+//         }else{
+//             reject('Error: something went wrong')
+//         }
+//     },1000)
 
-});
-async function consumedPromise(){
-    const response = await promise5
-    console.log(response)
+// });
+// async function consumedPromise(){
+
+//     try {
+//         const response = await promise5
+//         console.log(response)
+//     } catch (error) {
+//         console.log("Error:caught",error)
+        
+//     }
+// }
+// consumedPromise()
+
+
+async function getAllusers(){
+   try {
+     const response = await fetch("https://jsonplaceholder.typicode.com/users")
+     const  data= await response.json()
+     .then((data)=>{
+         console.log("user data",data)
+     })
+     .catch(()=>{
+        console.log("error during fetching data")
+     })
+    // console.log(data)
+   } catch (error) {
+    console.log(error)
+   }
 }
-consumedPromise()
+getAllusers();
