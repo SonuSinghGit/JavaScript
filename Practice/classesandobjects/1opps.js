@@ -20,4 +20,15 @@ function User(username,loginCount,isLogedIn){
     this.username= username;
     this.loginCount = loginCount;
     this.isLogedIn = isLogedIn;
+
+    this.greeting = (()=>{
+        console.log(`Welcone: ${this.username}`)
+    })
+
+    return this
 }
+
+const userOne = new User("sonu",12,true) // new kaywords prevents to overriding value
+const usertwo= new User("sunny",23,false) 
+console.log(userOne.constructor);
+// console.log(usertwo);
