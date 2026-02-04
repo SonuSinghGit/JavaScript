@@ -14,3 +14,28 @@ let heroPower = {
         console.log(`spiderpower is: ${this.spiderman}`);
     }
 }
+
+
+// INHERITANCE
+
+const User ={
+    name:"sonu",
+    email:"google@gmail.com"
+}
+
+const Teacher = {
+    makeVideo : true
+}
+const TeacherSupport = {
+    isAvailable : true
+}
+const TASupport = {
+    makeAssignment : "Js Assignment",
+    fullTime:true,
+    __proto__:TeacherSupport
+}
+
+Teacher.__proto__= User;
+
+// modern syntax
+Object.setPrototypeOf(TASupport,Teacher)
