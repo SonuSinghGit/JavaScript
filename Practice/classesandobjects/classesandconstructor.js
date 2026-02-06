@@ -1,11 +1,18 @@
-import React from 'react'
+class User {
+    constructor(username,email,password){
+        this.username= username,
+        this.email= email,
+        this.password= password
+    }
 
-function classesandconstructor() {
-  return (
-    <div>
-      this is done
-    </div>
-  )
+    encryptPassword(){
+        return `${this.password}abc`   
+    }
+    convetIntoUpper(){
+        return `${this.username.toUpperCase()}`
+    }
 }
 
-export default classesandconstructor
+const chai = new User("sonu","abc@gmail.com","12345");
+console.log(chai.encryptPassword())
+console.log(chai.convetIntoUpper())
