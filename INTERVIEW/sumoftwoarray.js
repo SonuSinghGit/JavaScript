@@ -19,3 +19,18 @@ const output = val1.reduce((acc,val,index)=>{
 // console.log(output)
 
 // THIRD METHOD
+const Arr1=[2,5,7,7]
+const Arr2 =[8,9,9,4]
+
+const myresult = [...Arr1,...Arr2].reduce((acc,val)=>{
+   return acc + val
+})
+
+const Arr4=[2,5,7,7]
+const Arr5 =[8,9,9,4]
+
+const flat =[...Arr4,...Arr2];
+const out=flat.reduce((acc,value)=>{
+   return acc + value
+})
+console.log(out)
