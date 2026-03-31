@@ -28,7 +28,7 @@ Promise.race([promise1, promise2]).then((value) => {
 //         console.log(error);
 //     });
 
-
+// PROMISE .ALL SETTLED
 // const p4 = Promise.resolve("Success 1");
 // const p5 = Promise.reject("Failed 2");
 // const p6 = Promise.resolve("Success 3");
