@@ -1,14 +1,14 @@
-// const promisOne = new Promise((resolve, reject) => {
+const promisOne = new Promise((resolve, reject) => {
 
-//   setTimeout(() => {
-//     console.log("Async task is complete");
-//      resolve();
-//   }, 1000);
+  setTimeout(() => {
+    console.log("Async task is complete");
+     resolve();
+  }, 1000);
 
-// });
-// promisOne.then(()=>{
-//     console.log("Promise consumed")
-// })
+});
+promisOne.then(()=>{
+    console.log("Promise consumed")
+})
 
 // second approch
 
