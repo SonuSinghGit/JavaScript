@@ -7,5 +7,8 @@
 
 ((name)=>{
       console.log(`db connected two ${name} `)
-})("sonu")
+})("sonu");
 
+((username)=>{
+    console.log("This is username",`${username}`)
+})("Aman")

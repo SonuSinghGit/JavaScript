@@ -45,3 +45,17 @@ Promise.race([promise1, promise2]).then((value) => {
 // Promise.any([p1, p2, p3])
 //     .then((result) => console.log(result))
 //     .catch((err) => console.log(err));
+
+
+const promise = new Promise((resolve,reject)=>{
+        let sucess = false
+        if(sucess){
+          resolve("promises resolved")
+        }else reject("promis rejected");
+})
+promise.then((res)=>{
+    console.log(res);
+})
+.catch((error)=>{
+  console.log("promis is rejected");
+});
