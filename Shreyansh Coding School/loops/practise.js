@@ -71,10 +71,49 @@
 // }
 
 // 9 . Count how many numbers between 1 to 100 are divisible by both 3 and 5
-let count = 0;
-for(let i=1; i<=100; i++){
-    if(i%3==0 && i%5==0){
-        count++;
-    }
-}
-console.log("count of numbers divisible by both 3 and 5 is:", count)
+// let count = 0;
+// for(let i=1; i<=100; i++){
+//     if(i%3==0 && i%5==0){
+//         count++;
+//     }
+// }
+// console.log("count of numbers divisible by both 3 and 5 is:", count)
+
+//10. write number 1 to 100.
+// . print each number
+//. stop completly when it finds the first number divisible by 7
+
+// for(let i=1; i<=100; i++){
+//     console.log(i);
+//     if(i%7===0){
+//         break;
+//     }
+// }
+
+//11. write number 1 to 20.
+// . print each number
+//. skip numbers divisible by 3 .
+// for(let i=1; i<=20; i++){
+
+//     if(i%3===0){
+//         continue;
+//     }
+//      console.log(i)
+// }
+
+//12. print first 5 Odd numbers only
+//. write number 1 to 100. then stop the loop.
+//. use both if , continue and a counter + break
+//. Expected output - 1 3 5 7 9
+
+// let count = 0;
+// for (let i = 1; i <= 100; i++) {
+//   if (i % 2 != 0) {
+//     count ++;
+//     console.log(i)
+//   }
+//   if (count === 5) {
+//       break;
+//     }
+ 
+// }
