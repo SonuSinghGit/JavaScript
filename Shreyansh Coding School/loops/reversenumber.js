@@ -1,0 +1,10 @@
+
+let num = 1234;
+let reverse = 0;
+
+while(num>0){
+    let digit = num%10 // get last digit
+    reverse = reverse * 10 + digit;
+    num= Math.floor(num/10); // ek digit hata do har bar 10 se divide karne par ek digit hat jata h
+}
+console.log("Reverse Number Are",reverse);
