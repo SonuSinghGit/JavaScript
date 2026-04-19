@@ -1,25 +1,25 @@
-const promisOne = new Promise((resolve, reject) => {
+// const promisOne = new Promise((resolve, reject) => {
 
-  setTimeout(() => {
-    console.log("Async task is complete");
-     resolve();
-  }, 1000);
+//   setTimeout(() => {
+//     console.log("Async task is complete");
+//      resolve();
+//   }, 1000);
 
-});
-promisOne.then(()=>{
-    console.log("Promise consumed")
-})
+// });
+// promisOne.then(()=>{
+//     console.log("Promise consumed")
+// })
 
 // second approch
 
-// new Promise((resolve,reject)=>{
-//     setTimeout(()=>{
-//       console.log("promis two resolved")
-//       resolve();
-//     },2000)
-// }).then(()=>{
-//     console.log("promise is consumed");
-// })
+new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+      console.log("promis two resolved")
+      resolve();
+    },2000)
+}).then(()=>{
+    console.log("promise is consumed");
+})
 
 // const promise3 = new Promise((resolve,reject)=>{
 //     setTimeout(()=>{
