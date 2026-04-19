@@ -38,15 +38,23 @@
 
 
 //BMI Calculator
-function BMI( weight,height){
-    return weight/(height*height)
-}
+// function BMI( weight,height){
+//     return weight/(height*height)
+// }
 
-const res =BMI(63,1.7)
-console.log(Math.floor(res))
+// const res =BMI(63,1.7)
+// console.log(Math.floor(res))
 
 // Create a reusable discount calculator(hof)
 
-function dicountCalculator(){
-    
+function dicountCalculator(discount){
+    return function (price){
+        return price - price*(discount/100);
+    }
+
 }
+let ten = dicountCalculator(10);
+let twenty = dicountCalculator(20);
+
+console.log("10 percent",ten(100))
+console.log("20 percent",twenty(100))
