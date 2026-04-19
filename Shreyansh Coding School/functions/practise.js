@@ -47,14 +47,39 @@
 
 // Create a reusable discount calculator(hof)
 
-function dicountCalculator(discount){
-    return function (price){
-        return price - price*(discount/100);
+// function dicountCalculator(discount){
+//     return function (price){
+//         return price - price*(discount/100);
+//     }
+
+// }
+// let ten = dicountCalculator(10);
+// let twenty = dicountCalculator(20);
+
+// console.log("10 percent",ten(100))
+// console.log("20 percent",twenty(100))
+
+// CREAET A COUNTER USING Closures
+
+function counter(){
+    let count =0;
+    return function (){
+        count++;
+        console.log(count)
     }
-
 }
-let ten = dicountCalculator(10);
-let twenty = dicountCalculator(20);
+let c = counter();
 
-console.log("10 percent",ten(100))
-console.log("20 percent",twenty(100))
+c();  // 1
+c(); // 2
+c(); // 3
+c(); // 4
+c(); // 5
+c(); // 6
+
+let d= counter()  //this d has your own counter
+
+d()// 1
+d() //2
+
+
