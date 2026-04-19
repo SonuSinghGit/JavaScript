@@ -37,3 +37,16 @@
 // })
 
 
+//BMI Calculator
+function BMI( weight,height){
+    return weight/(height*height)
+}
+
+const res =BMI(63,1.7)
+console.log(Math.floor(res))
+
+// Create a reusable discount calculator(hof)
+
+function dicountCalculator(){
+    
+}
