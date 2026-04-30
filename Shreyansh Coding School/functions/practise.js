@@ -61,25 +61,34 @@
 
 // CREAET A COUNTER USING Closures
 
-function counter(){
-    let count =0;
-    return function (){
-        count++;
-        console.log(count)
-    }
-}
-let c = counter();
+// function counter(){
+//     let count =0;
+//     return function (){
+//         count++;
+//         console.log(count)
+//     }
+// }
+// let c = counter();
 
-c();  // 1
-c(); // 2
-c(); // 3
-c(); // 4
-c(); // 5
-c(); // 6
+// c();  // 1
+// c(); // 2
+// c(); // 3
+// let d= counter()  //this d has your own counter
+// d()// 1
+// d() //2
 
-let d= counter()  //this d has your own counter
+//CREATE A PURE FUNCTION TO TRANSFORM A VALUE 
+// function Double(value){
+//     return value*2;
+// }
+// console.log(Double(12)) //24
 
-d()// 1
-d() //2
+// USE IIFE TO ISOLATE VARIABLE 
+(function (){
+    const password = "Secret password";
+    console.log(password)
+})();
+// console.log(password) // You can not acces this password variable outside of scope
+
 
 
